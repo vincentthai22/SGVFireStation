@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1026417506896",
+    "firebase_url": "https://sgvfirestation-10ab7.firebaseio.com",
+    "project_id": "sgvfirestation-10ab7",
+    "storage_bucket": "sgvfirestation-10ab7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1026417506896:android:01d2a305efa6d171",
+        "android_client_info": {
+          "package_name": "com.example.vincent.sgvfirestation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1026417506896-o8r2ouih5au9v7rrggjalms347cuhqp7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB78Tz1vXZF3agysmdsf9qDdWLTxR6O3TA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
