@@ -32,10 +32,10 @@ public class MainListViewAdapter extends BaseAdapter {
     {
         final ArrayList<MainListViewItem> moduleList = new ArrayList(5);
         moduleList.add(new MainListViewItem("Photo","photo"));
-        moduleList.add(new MainListViewItem("Diary","diary"));
-        moduleList.add(new MainListViewItem("Measurements","measurement"));
-        moduleList.add(new MainListViewItem("Nursing","nursing"));
-        moduleList.add(new MainListViewItem("Pumping","pumping"));
+        moduleList.add(new MainListViewItem("Menu","diary"));
+        moduleList.add(new MainListViewItem("Deals","measurement"));
+        moduleList.add(new MainListViewItem("Settings","nursing"));
+        moduleList.add(new MainListViewItem("About us","pumping"));
         moduleList.add(new MainListViewItem("Bath Time","bathtime"));
         moduleList.add(new MainListViewItem("Bottle","bottle"));
         moduleList.add(new MainListViewItem("Diaper","diaper"));

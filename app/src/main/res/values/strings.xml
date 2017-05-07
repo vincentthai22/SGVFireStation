@@ -3,4 +3,16 @@
     <string name="main_screen_title">SGV Fire Station</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!--List Item Strings-->
+
+    <!--Strain Types-->
+    <string name="indica_string">Indica</string>
+    <string name="sativa_string">Sativa</string>
+    <string name="hybrid_string"><Hybrid></Hybrid></string>
+
+    <!--Amount Strings-->
+    <string name="eighth">1/8</string>
+    <string name="quad">1/4</string>
+
 </resources>

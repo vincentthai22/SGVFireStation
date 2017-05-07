@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="20">
+
+        <ImageView
+            android:id="@+id/itemImageImageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/nug"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="80">
+
+        <TextView
+            android:id="@+id/titleOfItemTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*PR* Gorilla Glue"
+            style="@style/summaryLargeValueStyleBlack"
+            android:layout_marginLeft="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/itemTypeTextView"
+            android:text="@string/indica_string"
+            style="@style/summaryLargeValueStyle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleOfItemTextView"
+            android:layout_alignStart="@id/titleOfItemTextView"/>
+
+        <TextView
+            android:id="@+id/smallerAmountTextView"
+            android:text="@string/eighth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/itemTypeTextView"
+            android:layout_alignStart="@id/itemTypeTextView"/>
+
+        <TextView
+            android:id="@+id/largerAmountTextView"
+            android:text="1/4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/smallerAmountTextView"
+            android:layout_toRightOf="@id/smallerAmountTextView"
+            android:layout_marginLeft="30dp"/>
+
+        <ImageView
+            android:id="@+id/dividerImageView"
+            android:background="@drawable/btn_divider_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/itemTypeTextView"
+            android:layout_toRightOf="@id/largerAmountTextView"
+            android:layout_marginLeft="50dp"/>
+
+        <TextView
+            android:id="@+id/concentrationTextView"
+            android:text="THC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/largerAmountTextView"
+            android:layout_toRightOf="@id/dividerImageView"
+            android:layout_marginLeft="20dp"/>
+        <TextView
+            android:id="@+id/concentrationValueTextView"
+            android:text="25%"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@id/concentrationTextView"
+            android:layout_below="@id/concentrationTextView"/>
+
+        <TextView
+            android:id="@+id/smallerPriceAmountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/smallerAmountTextView"
+            android:layout_alignStart="@id/smallerAmountTextView"
+            android:text="45.00"/>
+
+        <TextView
+            android:id="@+id/largerPriceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="85.00"
+            android:layout_below="@+id/largerAmountTextView"
+            android:layout_alignStart="@id/largerAmountTextView"/>
+
+        <ImageView
+            android:id="@+id/forwardArrowImageView"
+            android:background="@drawable/btn_forward_black"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+</LinearLayout>

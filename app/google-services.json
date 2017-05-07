@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1026417506896-krlpjv0lv3d6iiuv8n6rel5l2ld3micj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.vincent.sgvfirestation",
+            "certificate_hash": "28f2a5b1a7ad5c8049a1351f293bdd47a29751c5"
+          }
+        },
+        {
           "client_id": "1026417506896-o8r2ouih5au9v7rrggjalms347cuhqp7.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1026417506896-o8r2ouih5au9v7rrggjalms347cuhqp7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2
