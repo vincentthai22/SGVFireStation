@@ -1,5 +1,6 @@
 package com.example.vincent.sgvfirestation;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -8,16 +9,21 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
+import com.example.vincent.sgvfirestation.models.MainListViewItem;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    private static final String TAG = MainActivity.class.getSimpleName();
 
     @BindView(R.id.main_list_view)
     ListView mMainListView;
@@ -49,7 +55,18 @@ public class MainActivity extends AppCompatActivity
 
         mMainListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
+
+                MainListViewItem mainListViewItem = (MainListViewItem) mMainListViewAdapter.getItem(position);
+                Intent intent;
+
+               Log.d(TAG, "clicked item is " + position);
+
+                switch(mainListViewItem.getTitle().toLowerCase()) {
+                    case "menu":
+                        intent = new Intent(MainActivity.this, MenuActivity.class);
+                        MainActivity.this.startActivity(intent);
+                }
 
             }
         });

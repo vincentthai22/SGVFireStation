@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.sevenlogics.babynursing.ScrollingActivity"
+    tools:context="com.example.vincent.sgvfirestation.ItemDetailScrollingActivity"
     tools:showIn="@layout/activity_scrolling">
 
     <LinearLayout
@@ -19,11 +19,11 @@
 
         <TextView
             style="@style/headerTextViewStyle"
-            android:text="@string/string_baby_info" />
+            android:text="someStr" />
 
         <TextView
             style="@style/subHeaderTextViewStyle"
-            android:text="@string/string_birthdate" />
+            android:text="someStr"/>
 
         <TextView
             android:id="@+id/txt_birthdate"
@@ -35,7 +35,7 @@
 
         <TextView
             style="@style/subHeaderTextViewStyle"
-            android:text="@string/string_birthtime" />
+            android:text="someStr" />
 
         <TextView
             android:id="@+id/txt_birthtime"
@@ -47,7 +47,7 @@
 
         <TextView
             style="@style/subHeaderTextViewStyle"
-            android:text="@string/string_gender" />
+            android:text="someStr" />
 
         <TextView
             android:id="@+id/txt_gender"
@@ -59,7 +59,7 @@
 
         <TextView
             style="@style/subHeaderTextViewStyle"
-            android:text="@string/string_blood_info" />
+            android:text="someStr" />
 
         <TextView
             android:id="@+id/txt_blood_info"
@@ -71,11 +71,11 @@
 
         <TextView
             style="@style/headerTextViewStyle"
-            android:text="@string/string_birth_info" />
+            android:text="someStr" />
 
         <TextView
             style="@style/subHeaderTextViewStyle"
-            android:text="@string/string_weight" />
+            android:text="someStr" />
 
         <include
             android:id="@+id/layout_weight"
@@ -87,7 +87,7 @@
 
         <TextView
             style="@style/subHeaderTextViewStyle"
-            android:text="@string/string_length" />
+            android:text="someStr" />
 
         <include
             android:id="@+id/layout_length"
@@ -99,7 +99,7 @@
 
         <TextView
             style="@style/subHeaderTextViewStyle"
-            android:text="@string/string_head_size" />
+            android:text="someStr" />
 
         <include
             android:id="@+id/layout_head_size"
@@ -111,7 +111,7 @@
 
         <TextView
             style="@style/subHeaderTextViewStyle"
-            android:text="@string/string_birthplace" />
+            android:text="someStr" />
 
         <TextView
             android:id="@+id/txt_birthplace"

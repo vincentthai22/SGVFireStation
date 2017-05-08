@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="horizontal" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/horizontalToolbarScrollview"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:scrollIndicators="none"
+    android:scrollbarFadeDuration="0"
+    android:scrollbarDefaultDelayBeforeFade="0"
+    android:background="@color/colorPrimary"
+    android:fillViewport="true">
 
     <LinearLayout
         android:id="@+id/scrolling_toolbar_linear_layout"
@@ -9,35 +16,74 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-    <Button
-        android:id="@+id/toolbar_sativa_button"
-        android:text="Sativa"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/toolbar_sativa_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/summaryLargeValueStyleWhite"
+            android:layout_margin="10dp"
+            android:text="Sativa" />
 
-    <Button
-        android:id="@+id/toolbar_hybrid_button"
-        android:text="Hybrid"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/toolbar_hybrid_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/summaryLargeValueStyleLightGray"
+            android:layout_margin="10dp"
+            android:text="Hybrid" />
 
-    <Button
-        android:id="@+id/toolbar_indica_button"
-        android:text="Indica"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/toolbar_indica_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/summaryLargeValueStyleLightGray"
+            android:layout_margin="10dp"
+            android:text="Indica" />
 
-    <Button
-        android:id="@+id/toolbar_wax_button"
-        android:text="Wax"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/toolbar_wax_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/summaryLargeValueStyleLightGray"
+            android:layout_margin="10dp"
+            android:text="Wax" />
 
-    <Button
-        android:id="@+id/toolbar_edibles_button"
-        android:text="Edibles"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/toolbar_edibles_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/summaryLargeValueStyleLightGray"
+            android:layout_margin="10dp"
+            android:text="Edibles" />
+        <TextView
+            android:id="@+id/toolbar_moon_rocks_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/summaryLargeValueStyleLightGray"
+            android:layout_margin="10dp"
+            android:text="Moonrocks" />
+        <TextView
+            android:id="@+id/toolbar_concentrates_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/summaryLargeValueStyleLightGray"
+            android:layout_margin="10dp"
+            android:text="Concentrate" />
+        <TextView
+            android:id="@+id/toolbar_pens_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/summaryLargeValueStyleLightGray"
+            android:layout_margin="10dp"
+            android:text="Pens" />
+        <TextView
+            android:id="@+id/toolbar_prerolls_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/summaryLargeValueStyleLightGray"
+            android:layout_margin="10dp"
+            android:text="Prerolls" />
+
     </LinearLayout>
 
-</ScrollView>
+</HorizontalScrollView>

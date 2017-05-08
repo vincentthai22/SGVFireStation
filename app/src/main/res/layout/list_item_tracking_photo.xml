@@ -1,39 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_width="match_parent" android:layout_height="120dp"
+    android:background="#777"
     >
 
-    <ImageView
-        android:layout_width="match_parent"
-        app:srcCompat="@drawable/default_cover_photo_1"
-        android:id="@+id/background_image_view"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:background="@android:color/black"
-        android:scaleType="centerCrop"
-        android:layout_height="120dp" />
-
     <TextView
+        android:id="@+id/background_name_text_view"
         android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/background_image_view"
+        android:layout_above="@+id/background_info_text_view"
         android:layout_alignParentStart="true"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="32dp"
-        android:id="@+id/background_name_textview"
         android:textColor="@android:color/white"
+
         android:textSize="20dp"
         />
 
     <TextView
+        android:id="@+id/background_info_text_view"
         android:text="TextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/background_image_view"
-        android:layout_alignStart="@+id/background_name_textview"
-        android:layout_marginBottom="11dp"
-        android:textColor="@android:color/white"
-        android:id="@+id/background_age_textview" />
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/background_name_text_view"
+        android:textColor="@android:color/white" />
+
+    <ImageView
+        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:id="@+id/background_image_view"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/large_fire_station_gray"
+        android:scaleType="centerCrop"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/background_name_text_view"
+        />
 </RelativeLayout>

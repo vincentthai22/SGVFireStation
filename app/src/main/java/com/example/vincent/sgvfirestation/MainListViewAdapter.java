@@ -94,8 +94,8 @@ public class MainListViewAdapter extends BaseAdapter {
                 convertView = mInflater.inflate(R.layout.list_item_tracking_photo, parent, false);
                 viewHolder = new ViewHolderTrackingModule();
                 viewHolder.imageView = (ImageView) convertView.findViewById(R.id.background_image_view);
-                viewHolder.titleTextView = (TextView) convertView.findViewById(R.id.background_name_textview);
-                viewHolder.textView2 = (TextView) convertView.findViewById(R.id.background_age_textview);
+                viewHolder.titleTextView = (TextView) convertView.findViewById(R.id.background_name_text_view);
+                viewHolder.textView2 = (TextView) convertView.findViewById(R.id.background_info_text_view);
                 convertView.setTag(viewHolder);
             }
             else
