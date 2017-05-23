@@ -1,5 +1,7 @@
 package com.example.vincent.sgvfirestation.models;
 
+import android.graphics.drawable.Icon;
+
 import com.example.vincent.sgvfirestation.AppConstants;
 
 /**
@@ -13,6 +15,8 @@ public class MenuItem {
     private String priceTier;
     private String itemType;
     private String description;
+
+    private Icon image;
     private float singlePrice,eightPrice, quadPrice, halfOzPrice, ouncePrice,
             thcLevel, cbdLevel, cbnLevel;
 
@@ -43,6 +47,16 @@ public class MenuItem {
     public MenuItem(){
 
 
+    }
+
+
+
+    public Icon getImage() {
+        return image;
+    }
+
+    public void setImage(Icon image) {
+        this.image = image;
     }
 
     public String getItemName() {

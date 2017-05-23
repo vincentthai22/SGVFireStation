@@ -150,7 +150,7 @@ public class HeaderListView extends RelativeLayout {
                 boolean nextHasHeader = mAdapter.hasSectionHeaderView(actualSection + 1);
                 boolean currHasHeader = mAdapter.hasSectionHeaderView(actualSection);
                 boolean currIsLast = mAdapter.getRowInSection(realFirstVisibleItem) == mAdapter.numberOfRows(actualSection) - 1;
-                boolean prevHasRows = mAdapter.numberOfRows(actualSection - 1) > 0;
+                boolean prevHasRows = mAdapter.numberOfRows(actualSection > 0 ? actualSection - 1 : actualSection) > 0;
                 boolean currIsFirst = mAdapter.getRowInSection(realFirstVisibleItem) == 0;
 
                 boolean needScrolling = currIsFirst && !currHasHeader && prevHasHeader && realFirstVisibleItem != firstVisibleItem;
@@ -159,7 +159,7 @@ public class HeaderListView extends RelativeLayout {
                 noHeaderUpToHeader = false;
                 if (currIsHeader && !prevHasHeader && firstVisibleItem >= 0) {
                     resetHeader(direction < 0 ? actualSection - 1 : actualSection);
-                } else if ((currIsHeader && firstVisibleItem > 0) || needScrolling) {
+                } else if ((currIsHeader && realFirstVisibleItem > 0) || needScrolling) {
                     if (!prevHasRows) {
                         resetHeader(actualSection-1);
                     }

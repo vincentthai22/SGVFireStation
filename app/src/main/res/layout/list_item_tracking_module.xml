@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/mainPageBackgroundColor"
+    android:clickable="false">
 
     <TextView
         android:text="TextView"
@@ -9,24 +11,82 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/base_top_margin"
         android:layout_marginLeft="@dimen/base_left_margin"
+        android:layout_alignTop="@+id/imageView"
+        android:layout_toRightOf="@id/imageView"
+        android:textColor="#444444"
+        android:textSize="20dp"
+
         android:id="@+id/titleTextView" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/bathtime"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:id="@+id/imageView"
-        android:layout_marginTop="42dp"
         android:layout_alignParentTop="true"
+        app:srcCompat="@drawable/marijane_leaf"
+        android:scaleType="centerInside"
         android:layout_alignParentStart="true"
         android:layout_marginLeft="@dimen/base_left_margin"
-        android:layout_marginBottom="@dimen/base_bottom_margin"/>
-<!--
-    <fragment
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:name="com.sevenlogics.babynursing.Timer.TimerFragmentMini"
-        android:id="@+id/fragment_timer_mini"
-        ></fragment>
--->
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"/>
+
+    <!--<HorizontalScrollView-->
+        <!--android:id="@+id/horizontalToolbarScrollview"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:scrollIndicators="none"-->
+        <!--android:scrollbarFadeDuration="0"-->
+        <!--android:scrollbarDefaultDelayBeforeFade="0"-->
+        <!--android:background="#FFF"-->
+        <!--android:layout_marginLeft="5dp"-->
+        <!--android:layout_below="@+id/imageView"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:clickable="false">-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/scrolling_toolbar_linear_layout"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:layout_marginBottom="20dp"-->
+            <!--android:orientation="horizontal"-->
+            <!--android:background="@color/mainPageBackgroundColor2"-->
+            <!--android:clickable="false">-->
+
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="200dp"-->
+                <!--android:layout_height="250dp"-->
+                <!--android:background="@color/mainPageRelativeLayoutColor"-->
+                <!--android:clickable="false">-->
+
+                <!--<TextView-->
+                    <!--android:id="@+id/sativa_text_view"-->
+                    <!--android:text="Indica"-->
+                    <!--android:layout_above="@+id/sativa_image_button"-->
+                    <!--android:textAlignment="center"-->
+                    <!--android:textSize="30dp"-->
+                    <!--android:layout_marginBottom="10dp"-->
+                    <!--android:layout_width="200dp"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:clickable="false"/>-->
+
+                <!--<ImageButton-->
+                    <!--android:id="@+id/sativa_image_button"-->
+                    <!--android:layout_width="250dp"-->
+                    <!--android:layout_height="200dp"-->
+                    <!--android:background="@drawable/alpha_og"-->
+                    <!--android:layout_alignParentBottom="true"-->
+                    <!--android:layout_centerHorizontal="true"-->
+                    <!--android:clickable="false"/>-->
+            <!--</RelativeLayout>-->
+
+
+        <!--</LinearLayout>-->
+
+    <!--</HorizontalScrollView>-->
+
 </RelativeLayout>

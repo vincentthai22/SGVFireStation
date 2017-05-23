@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <include layout="@layout/content_summary_toolbar"
+    <include layout="@layout/content_toolbar"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"/>
 
@@ -14,8 +14,12 @@
         android:layout_width="match_parent"/>
 
     <com.example.vincent.sgvfirestation.utils.HeaderListView
+        android:id="@+id/menuHeaderListView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:divider="#666"
+        android:dividerHeight="1dp"
+        >
 
     </com.example.vincent.sgvfirestation.utils.HeaderListView>
 

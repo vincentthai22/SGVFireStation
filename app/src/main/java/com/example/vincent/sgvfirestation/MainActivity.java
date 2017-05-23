@@ -20,14 +20,14 @@ import com.example.vincent.sgvfirestation.models.MainListViewItem;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity
+public class MainActivity extends BaseActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     private static final String TAG = MainActivity.class.getSimpleName();
 
     @BindView(R.id.main_list_view)
     ListView mMainListView;
-    @BindView(R.id.toolbar)
+    @BindView(R.id.toolbar_custom)
     Toolbar mToolBar;
     @BindView(R.id.drawer_layout)
     DrawerLayout mDrawer;
@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         setSupportActionBar(mToolBar);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, mDrawer, mToolBar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, mDrawer, mToolBar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         mDrawer.addDrawerListener(toggle);
         toggle.syncState();
 
@@ -53,25 +53,30 @@ public class MainActivity extends AppCompatActivity
 
         mMainListView.setAdapter(mMainListViewAdapter);
 
-        mMainListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+        AdapterView.OnItemClickListener listener = new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
 
                 MainListViewItem mainListViewItem = (MainListViewItem) mMainListViewAdapter.getItem(position);
                 Intent intent;
 
-               Log.d(TAG, "clicked item is " + position);
+                Log.d(TAG, "clicked item is " + position);
+                Log.d(TAG, "clicked item name is " + mainListViewItem.getTitle().toLowerCase());
 
-                switch(mainListViewItem.getTitle().toLowerCase()) {
+                switch (mainListViewItem.getTitle().toLowerCase()) {
                     case "menu":
                         intent = new Intent(MainActivity.this, MenuActivity.class);
                         MainActivity.this.startActivity(intent);
                 }
 
             }
-        });
+        };
+
+        mMainListView.setOnItemClickListener(listener);
 
     }
+
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {

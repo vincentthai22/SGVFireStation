@@ -9,19 +9,33 @@ import java.util.ArrayList;
 public class MenuTableSections {
 
     private String title;
+
     private ArrayList<MenuItem> sectionData;
 
     private Object sectionTag;
 
     private Boolean expanded = false;
 
-    public MenuTableSections(){
+    public MenuTableSections(String title){
         sectionData = new ArrayList<>();
-        title = "";
+        this.title = title;
 
     }
 
     public void addMenuItem(MenuItem menuItem){
         sectionData.add(menuItem);
+    }
+
+
+    public ArrayList<MenuItem> getSectionData() {
+        return sectionData;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

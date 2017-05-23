@@ -7,4 +7,8 @@
     <color name="colorText">#FFFFFF</color>
     <color name="colorSectionHeaderBg">#EEEEEE</color>
 
+    <color name="mainPageBackgroundColor">#f0e7d6</color>
+    <color name="mainPageBackgroundColor2">#bbc4c3</color>
+    <color name="mainPageRelativeLayoutColor">#e2eeec</color>
+
 </resources>

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -26,14 +27,15 @@ public class MainListViewAdapter extends BaseAdapter {
 
     private int ViewType_Photo = 0;
     private int ViewType_Tracking = 1;
+    private AdapterView.OnItemClickListener listener;
 
 
     public MainListViewAdapter(Context context)
     {
         final ArrayList<MainListViewItem> moduleList = new ArrayList(5);
         moduleList.add(new MainListViewItem("Photo","photo"));
-        moduleList.add(new MainListViewItem("Menu","diary"));
-        moduleList.add(new MainListViewItem("Deals","measurement"));
+        moduleList.add(new MainListViewItem("Menu","marijane_leaf"));
+        moduleList.add(new MainListViewItem("Deals","deals"));
         moduleList.add(new MainListViewItem("Settings","nursing"));
         moduleList.add(new MainListViewItem("About us","pumping"));
         moduleList.add(new MainListViewItem("Bath Time","bathtime"));
@@ -44,6 +46,10 @@ public class MainListViewAdapter extends BaseAdapter {
         mContext = context;
         mModules = moduleList;
         mInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+    }
+
+    public void setOnClickListener(AdapterView.OnItemClickListener listener){
+        this.listener = listener;
     }
 
     @Override
