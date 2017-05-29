@@ -103,14 +103,23 @@ public class AppConstants {
 
 
     public enum ItemTypes {
-        Sativa,
-        Indica,
-        Hybrid,
-        Edible,
-        Wax,
-        Concentrate,
-        Pens,
-        Prerolls;
+
+        Sativa("Sativa"),
+        Indica("Indica"),
+        Hybrid("Hybrid"),
+        Edible("Edible"),
+        Wax("Wax"),
+        Concentrate("Concentrate"),
+        Pens("Pens"),
+        Prerolls("Prerolls");
+
+        private String name;
+
+        ItemTypes(String name){this.name=name;}
+
+        public String getName() {
+            return name;
+        }
 
 
     }

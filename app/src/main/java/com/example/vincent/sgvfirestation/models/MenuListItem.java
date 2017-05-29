@@ -30,6 +30,9 @@ public class MenuListItem {
         this.itemType = itemType;
         this.description = description;
         this.itemId = FirebaseManager.menuItemIdIncrementor++;
+        this.thcLevel = 25f;
+        this.cbdLevel = 5f;
+        this.cbdLevel = 2f;
         switch(priceTier){
             case AppConstants.lowTier:
                 singlePrice = AppConstants.LowTierPrice.Gram.getPrice();

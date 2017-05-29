@@ -96,6 +96,7 @@ public class MenuActivity extends BaseActivity {
                 Bundle bundle = new Bundle();
                 bundle.putString(getString(R.string.menuItemId), menuListItem.getItemId() + "");
                 bundle.putString(getString(R.string.menuTypeIdentifier), menuListItem.getItemType());
+                bundle.putString(getString(R.string.menuItemTitle), menuListItem.getItemName());
 
                 intent.putExtras(bundle);
 

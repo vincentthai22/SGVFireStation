@@ -24,11 +24,11 @@
             <TextView
                 android:id="@+id/titleOfItemTextView"
                 style="@style/headerTextViewStyle"
-                android:text="Gorilla Glue" />
+                android:text="Indica" />
 
             <TextView
                 style="@style/subHeaderTextViewStyle"
-                android:text="Indica"
+                android:text="dense and stanky"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true"
                 android:id="@+id/textView" />
@@ -44,16 +44,20 @@
                 android:id="@+id/thumbsUpCountTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="15dp"
+                android:layout_marginRight="25dp"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/greenThumbsUpImageView"
                 android:textColor="#000"
                 android:text="0"/>
 
         </RelativeLayout>
+
         <Space
             android:layout_width="match_parent"
             android:layout_height="20dp" />
+
+        <!--PRICING AND THC LEVELS-->
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -61,48 +65,156 @@
             <TextView
                 android:id="@+id/singleGramLabelTextView"
                 style="@style/summaryMediumTextStyleBlack"
-                android:text="1g"
+                android:text="ONE GRAM:"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content" />
 
             <TextView
+                android:id="@+id/singleGramValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/singleGramLabelTextView"
+                android:layout_alignBottom="@+id/singleGramLabelTextView"
+                android:text="$10"
+                android:layout_marginLeft="40dp"/>
+
+            <TextView
                 android:id="@+id/twoGramLabelTextView"
                 style="@style/summaryMediumTextStyleBlack"
-                android:text="2g"
+                android:text="TWO GRAMS:"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/singleGramLabelTextView"/>
 
             <TextView
+                android:id="@+id/twoGramValueTextView"
+                android:layout_alignBottom="@id/twoGramLabelTextView"
+                android:layout_alignRight="@id/singleGramValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$20"/>
+
+            <TextView
                 android:id="@+id/eighthGramLabelTextView"
                 style="@style/summaryMediumTextStyleBlack"
-                android:text="1/8"
+                android:text="EIGHTH:"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/twoGramLabelTextView"/>
 
             <TextView
-                android:id="@+id/halfOzGramLabelTextView"
+                android:id="@+id/eighthGramValueTextView"
+                android:layout_alignBottom="@+id/eighthGramLabelTextView"
+                android:layout_alignRight="@+id/singleGramValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$35"/>
+
+            <TextView
+                android:id="@+id/quadLabelTextView"
                 style="@style/summaryMediumTextStyleBlack"
-                android:text="1/2"
+                android:text="QUAD:"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/eighthGramLabelTextView"/>
 
             <TextView
-                android:id="@+id/OzGramLabelTextView"
-                style="@style/summaryMediumTextStyleBlack"
-                android:text="OZ"
+                android:id="@+id/quadValueTextView"
+                android:layout_alignBottom="@+id/quadLabelTextView"
+                android:layout_alignRight="@+id/singleGramValueTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/halfOzGramLabelTextView"/>
+                android:text="$70"/>
+
+            <TextView
+                android:id="@+id/halfOzLabelTextView"
+                style="@style/summaryMediumTextStyleBlack"
+                android:text="HALF OZ:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/quadLabelTextView"/>
+
+            <TextView
+                android:id="@+id/halfOzValueTextView"
+                android:layout_alignBottom="@+id/halfOzLabelTextView"
+                android:layout_alignRight="@+id/singleGramValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$120"/>
+
+            <TextView
+                android:id="@+id/OzLabelTextView"
+                style="@style/summaryMediumTextStyleBlack"
+                android:text="OZ:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/halfOzLabelTextView"/>
+
+            <TextView
+                android:id="@+id/OzGramValueTextView"
+                android:layout_alignBottom="@+id/OzLabelTextView"
+                android:layout_alignRight="@+id/singleGramValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$220"/>
+
+            <!--THC AND STUFF-->
                 
             <TextView
+                android:id="@+id/thcLabelTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                style="@style/summaryMediumTextStyleBlack"
                 android:text="THC:"
                 android:layout_toRightOf="@+id/centerDividerTextView"
                 android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:id="@+id/thcValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/thcLabelTextView"
+                android:layout_marginRight="25dp"
+                android:layout_alignParentRight="true"
+                android:text="20%"/>
+
+            <TextView
+                android:id="@+id/cbdLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/summaryMediumTextStyleBlack"
+                android:layout_alignLeft="@id/thcLabelTextView"
+                android:layout_below="@id/thcLabelTextView"
+                android:layout_marginTop="20dp"
+                android:text="CBD: "/>
+
+            <TextView
+                android:id="@+id/cbdValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/cbdLabelTextView"
+                android:layout_marginRight="25dp"
+                android:layout_alignParentRight="true"
+                android:text="20%"/>
+
+            <TextView
+                android:id="@+id/cbnLabelTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/summaryMediumTextStyleBlack"
+                android:layout_alignLeft="@id/thcLabelTextView"
+                android:layout_below="@id/cbdLabelTextView"
+                android:layout_marginTop="20dp"
+                android:text="CBN: "/>
+
+            <TextView
+                android:id="@+id/cbnValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/cbnLabelTextView"
+                android:layout_marginRight="25dp"
+                android:layout_alignParentRight="true"
+                android:text="20%"/>
 
             
             <TextView
@@ -115,8 +227,8 @@
         </RelativeLayout>
 
         <TextView
-            style="@style/subHeaderTextViewStyle"
-            android:text="someStr" />
+            style="@style/headerTextViewStyle"
+            android:text="Description:" />
 
         <TextView
             android:id="@+id/txt_gender"

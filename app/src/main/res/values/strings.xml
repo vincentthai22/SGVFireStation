@@ -16,6 +16,7 @@
     <string name="quad">1/4</string>
 
     <!--Intent Strings-->
+    <string name="menuItemTitle">MenuItemTitleIdentifier</string>
     <string name="menuItemId">MenuItemStringIdentifier</string>
     <string name="menuTypeIdentifier">MenuTypeIdentifier</string>
     <string name="menuTypeStringIndica">indica</string>

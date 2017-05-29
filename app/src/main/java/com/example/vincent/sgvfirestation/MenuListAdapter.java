@@ -61,7 +61,9 @@ public class MenuListAdapter extends SectionAdapter {
         MenuListItem menuListItem = getRowItem(section, row);
 
         MenuListAdapter.ViewHolderRowItem viewHolderRowItem;
+
         if (convertView == null) {
+
             convertView = inflater.inflate(R.layout.list_item_menu_item, parent,false);
             viewHolderRowItem = new ViewHolderRowItem();
             viewHolderRowItem.titleOfItemTextView = (TextView) convertView.findViewById(R.id.titleOfItemTextView);
@@ -71,6 +73,7 @@ public class MenuListAdapter extends SectionAdapter {
             viewHolderRowItem.largerPriceTextView = (TextView) convertView.findViewById(R.id.largerPriceTextView);
             viewHolderRowItem.itemImageImageView = (ImageView) convertView.findViewById(R.id.itemImageImageView);
             convertView.setTag(viewHolderRowItem);
+
         } else {
             viewHolderRowItem = (ViewHolderRowItem) convertView.getTag();
         }

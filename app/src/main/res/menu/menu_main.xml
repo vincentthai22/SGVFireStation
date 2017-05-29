@@ -2,6 +2,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.sevenlogics.babynursing.MainActivity">
+
+
+    <item
+        android:id="@+id/shopping_cart"
+        android:icon="@drawable/shopping_cart"
+        android:title="Cart"
+        app:showAsAction="always"/>
+
     <item
         android:id="@+id/action_search"
         android:icon="@android:drawable/ic_menu_search"
@@ -12,6 +20,8 @@
     <item
         android:id="@+id/action_add"
         android:icon="@drawable/img_plus_sign"
-        android:title="add"
-        app:showAsAction="ifRoom|" />
+        android:title="Add"
+        app:showAsAction="ifRoom" />
+
+
 </menu>
