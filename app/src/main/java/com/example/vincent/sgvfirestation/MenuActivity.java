@@ -18,7 +18,7 @@ import android.widget.TextView;
 
 import com.example.vincent.sgvfirestation.Firebase.FirebaseManager;
 import com.example.vincent.sgvfirestation.models.MenuListItem;
-import com.example.vincent.sgvfirestation.models.MenuTableSections;
+import com.example.vincent.sgvfirestation.tableSections.MenuTableSections;
 import com.example.vincent.sgvfirestation.utils.HeaderListView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -52,7 +52,7 @@ public class MenuActivity extends BaseActivity {
     MenuTableSections menuTableSections;
 
     MenuListItem menuListItem;
-    MenuListAdapter adapter;
+    MenuListAdapter menuListAdapter;
     ArrayList<MenuTableSections> tableSections = new ArrayList<>();
     AnimationDrawable loadingAnimation;
 
@@ -66,7 +66,9 @@ public class MenuActivity extends BaseActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu);
+        super.initialize();
         ButterKnife.bind(this);
+
         isInitialized = false;
         toolbar.setTitle(getTitle());
         menuHeaderListView = (HeaderListView) findViewById(R.id.menuHeaderListView);
@@ -78,35 +80,40 @@ public class MenuActivity extends BaseActivity {
         RelativeLayout loadingLayout = (RelativeLayout) getLayoutInflater().inflate(R.layout.loading_dialog_layout, null);
         TextView loadingAnimationTextView = (TextView) loadingLayout.findViewById(R.id.loadingAnimationTextView);
         loadingAnimation = (AnimationDrawable) loadingAnimationTextView.getBackground();
-
         builder.setView(loadingLayout);
         builder.setTitle(getString(R.string.welcomeText));
         loadingDialog = builder.show();
         loadingAnimation.start();
 
+        setupFirebaseListeners();
+    }
 
-        populateTableSections();
-
-
-        OnMenuItemClickedListener onMenuItemClickedListener = new OnMenuItemClickedListener() {
+    private void onMenuClickedListener(){
+        menuListAdapter.onMenuItemClickedListener = new OnMenuItemClickedListener() {
             @Override
             public void onMenuItemClicked(MenuListItem menuListItem) {
                 Intent intent = new Intent(MenuActivity.this, ItemDetailScrollingActivity.class);
-                Bundle bundle = intent.getExtras();
+                Bundle bundle = new Bundle();
                 bundle.putString(getString(R.string.menuItemId), menuListItem.getItemId() + "");
+                bundle.putString(getString(R.string.menuTypeIdentifier), menuListItem.getItemType());
+
+                intent.putExtras(bundle);
 
                 startActivity(intent);
             }
         };
+    }
 
-        FirebaseManager.ourInstance().getMenuReference().addValueEventListener(new ValueEventListener() {  // menu
+    private void setupFirebaseListeners() {
+
+        FirebaseManager.ourInstance().getMenuReference().addValueEventListener(new ValueEventListener() {  // menuListAdapter
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
                 for (DataSnapshot subMenu : dataSnapshot.getChildren()) {// indica
                     MenuTableSections menuTableSections1 = new MenuTableSections(subMenu.getKey());
                     for (DataSnapshot items : subMenu.getChildren()) {    // items
-                        menuTableSections1.addMenuItem(items.getValue(MenuListItem.class));
+                        menuTableSections1.addMenuItem(items.getValue(MenuListItem.class)).setItemId(Integer.parseInt(items.getKey()));
                     }
                     tableSections.add(menuTableSections1);
                     if(isInitialized)
@@ -115,27 +122,11 @@ public class MenuActivity extends BaseActivity {
 
                 if(!isInitialized) {
                     populateTableSections();
+                    MenuTableSections temp = tableSections.get(tableSections.size()-1);
+                    FirebaseManager.menuItemIdIncrementor = temp.getSectionData().get(temp.getSectionData().size()-1).getItemId();
+                    Log.d(TAG,"LastIndexOfLastItemLoaded: " + temp.getSectionData().get(temp.getSectionData().size()-1).getItemId());
                     loadingDialog.dismiss();
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-
-
-    }
-
-    private void setupFirebaseListeners() {
-
-        FirebaseManager.ourInstance().getIndicaMenuReference().addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                for (DataSnapshot ds : dataSnapshot.getChildren()) {
-                    menuListItem = ds.getValue(MenuListItem.class);
-                    Log.d("firebase", menuListItem.getItemName());
+                    onMenuClickedListener();
                 }
             }
 
@@ -165,17 +156,17 @@ public class MenuActivity extends BaseActivity {
         tableSections.add(menuTableSections);
 
 
-        adapter = new MenuListAdapter();
-        adapter.setup(this);
-        adapter.setupData(tableSections);
-        menuHeaderListView.setAdapter(adapter);
+        menuListAdapter = new MenuListAdapter();
+        menuListAdapter.setup(this);
+        menuListAdapter.setupData(tableSections);
+        menuHeaderListView.setAdapter(menuListAdapter);
         menuHeaderListView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Log.d(TAG, "clicked");
             }
         });
-        adapter.notifyDataSetChanged();
+        menuListAdapter.notifyDataSetChanged();
     }
 
     @Override

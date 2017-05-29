@@ -21,6 +21,12 @@ public class BaseActivity extends AppCompatActivity {
     final static String TAG = BaseActivity.class.getSimpleName();
 
     @Override
+    public void finish() {
+        super.finish();
+        overridePendingTransition(R.animator.animator_slide_right_half, R.animator.animator_slide_right);
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
 
@@ -84,7 +90,7 @@ public class BaseActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        overridePendingTransition(R.animator.animator_slide_right_half, R.animator.animator_slide_right);
+        this.finish();
 
     }
 

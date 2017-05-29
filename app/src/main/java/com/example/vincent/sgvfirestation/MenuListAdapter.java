@@ -1,6 +1,7 @@
 package com.example.vincent.sgvfirestation;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.vincent.sgvfirestation.models.MenuListItem;
-import com.example.vincent.sgvfirestation.models.MenuTableSections;
+import com.example.vincent.sgvfirestation.tableSections.MenuTableSections;
 import com.example.vincent.sgvfirestation.utils.SectionAdapter;
 
 import java.text.DecimalFormat;
@@ -20,6 +21,8 @@ import java.util.ArrayList;
  */
 
 public class MenuListAdapter extends SectionAdapter {
+
+    private static final String TAG = MenuListAdapter.class.getSimpleName();
 
     private ArrayList<MenuTableSections> tableSections;
 
@@ -67,10 +70,9 @@ public class MenuListAdapter extends SectionAdapter {
             viewHolderRowItem.smallerPriceTextView = (TextView) convertView.findViewById(R.id.smallerPriceAmountTextView);
             viewHolderRowItem.largerPriceTextView = (TextView) convertView.findViewById(R.id.largerPriceTextView);
             viewHolderRowItem.itemImageImageView = (ImageView) convertView.findViewById(R.id.itemImageImageView);
-
+            convertView.setTag(viewHolderRowItem);
         } else {
             viewHolderRowItem = (ViewHolderRowItem) convertView.getTag();
-            return convertView;
         }
 
         viewHolderRowItem.titleOfItemTextView.setText(menuListItem.getItemName());
@@ -98,7 +100,6 @@ public class MenuListAdapter extends SectionAdapter {
     @Override
     public void onRowItemClick(AdapterView<?> parent, View view, int section, int row, long id) {
         MenuListItem menuListItem = getRowItem(section,row);
-
         onMenuItemClickedListener.onMenuItemClicked(menuListItem);
 
     }

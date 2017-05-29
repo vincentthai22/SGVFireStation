@@ -1,4 +1,6 @@
-package com.example.vincent.sgvfirestation.models;
+package com.example.vincent.sgvfirestation.tableSections;
+
+import com.example.vincent.sgvfirestation.models.MenuListItem;
 
 import java.util.ArrayList;
 
@@ -22,8 +24,9 @@ public class MenuTableSections {
 
     }
 
-    public void addMenuItem(MenuListItem menuListItem){
+    public MenuListItem addMenuItem(MenuListItem menuListItem){
         sectionData.add(menuListItem);
+        return menuListItem;
     }
 
 

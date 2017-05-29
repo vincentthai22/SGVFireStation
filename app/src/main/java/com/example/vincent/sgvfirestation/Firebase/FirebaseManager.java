@@ -43,4 +43,16 @@ public class FirebaseManager {
         return getMenuReference().child("indica");
     }
 
+    public DatabaseReference getSativaMenuReference() {
+        return getMenuReference().child("sativa");
+    }
+
+    public DatabaseReference getHybridMenuReference() {
+        return getMenuReference().child("hybrid");
+    }
+
+    public DatabaseReference getConcentratesMenuReference() {
+        return getMenuReference().child("concentrates");
+    }
+
 }

@@ -17,6 +17,11 @@
 
     <!--Intent Strings-->
     <string name="menuItemId">MenuItemStringIdentifier</string>
+    <string name="menuTypeIdentifier">MenuTypeIdentifier</string>
+    <string name="menuTypeStringIndica">indica</string>
+    <string name="menuTypeStringSativa">sativa</string>
+    <string name="menuTypeStringHybrid">hybrid</string>
+    <string name="menuTypeStringConcentrates">concentrates</string>
 
     <!--Dialog String-->
     <string name="loadingMenuText">Please wait for menu to load...</string>

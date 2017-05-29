@@ -18,6 +18,6 @@
         android:layout_toLeftOf="@id/loadingText"
         android:layout_centerVertical="true"
         android:layout_marginRight="10dp"
-        android:background="@drawable/loading_animation"/>
+        android:background="@drawable/loading_animation_flames"/>
 
 </RelativeLayout>
