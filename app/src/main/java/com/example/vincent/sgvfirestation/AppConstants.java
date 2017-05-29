@@ -31,7 +31,55 @@ public class AppConstants {
         }
 
         public String toString() {
-            return "low-tier";
+            return TierString.LowTier.getName();
+        }
+
+    }
+
+    public enum MidTierPrice {
+
+        Gram(15),
+        Eighth(50),
+        Quad(90),
+        HalfOz(170),
+        Ounce(300);
+
+        private float price;
+
+        MidTierPrice(float price) {
+            this.price = price;
+        }
+
+        public float getPrice() {
+            return price;
+        }
+
+        public String toString() {
+            return TierString.MidTier.getName();
+        }
+
+    }
+
+    public enum HighTierPrice {
+
+        Gram(20),
+        Eighth(60),
+        Quad(105),
+        HalfOz(190),
+        Ounce(320);
+
+        private float price;
+
+        HighTierPrice(float price) {
+            this.price = price;
+        }
+
+        public float getPrice() {
+            return price;
+        }
+
+        public String toString() {
+            return TierString.HighTier.getName();
         }
 
     }

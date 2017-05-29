@@ -10,7 +10,7 @@ public class MenuTableSections {
 
     private String title;
 
-    private ArrayList<MenuItem> sectionData;
+    private ArrayList<MenuListItem> sectionData;
 
     private Object sectionTag;
 
@@ -22,12 +22,12 @@ public class MenuTableSections {
 
     }
 
-    public void addMenuItem(MenuItem menuItem){
-        sectionData.add(menuItem);
+    public void addMenuItem(MenuListItem menuListItem){
+        sectionData.add(menuListItem);
     }
 
 
-    public ArrayList<MenuItem> getSectionData() {
+    public ArrayList<MenuListItem> getSectionData() {
         return sectionData;
     }
 

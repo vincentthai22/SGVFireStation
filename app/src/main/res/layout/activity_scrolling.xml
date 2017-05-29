@@ -27,7 +27,7 @@
                 android:id="@+id/banner_img"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/baby_img"
+                android:src="@drawable/supreme_og"
                 android:scaleType="centerCrop" />
 
             <android.support.v7.widget.Toolbar

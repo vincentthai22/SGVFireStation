@@ -9,7 +9,7 @@
         android:orientation="horizontal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="23"
+        android:layout_weight="30"
         android:layout_marginLeft="10dp">
 
         <ImageView
@@ -23,7 +23,7 @@
     <RelativeLayout
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_weight="77">
+        android:layout_weight="70">
 
         <TextView
             android:id="@+id/titleOfItemTextView"
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:text="*PR* Gorilla Glue"
             style="@style/summaryLargeValueStyleBlack"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="15dp"
             android:layout_alignParentTop="true"
             android:layout_marginTop="10dp"/>
 

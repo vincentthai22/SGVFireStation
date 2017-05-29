@@ -1,16 +1,16 @@
-package com.example.vincent.sgvfirestation.utils;
+package com.example.vincent.sgvfirestation;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.vincent.sgvfirestation.MenuActivity;
-import com.example.vincent.sgvfirestation.R;
-import com.example.vincent.sgvfirestation.models.MenuItem;
+import com.example.vincent.sgvfirestation.models.MenuListItem;
 import com.example.vincent.sgvfirestation.models.MenuTableSections;
+import com.example.vincent.sgvfirestation.utils.SectionAdapter;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -19,13 +19,15 @@ import java.util.ArrayList;
  * Created by Vincent on 5/7/2017.
  */
 
-public class FireStationBaseAdapter extends SectionAdapter {
+public class MenuListAdapter extends SectionAdapter {
 
     private ArrayList<MenuTableSections> tableSections;
 
     private Context context;
     private LayoutInflater inflater;
     private DecimalFormat df;
+
+    public MenuActivity.OnMenuItemClickedListener onMenuItemClickedListener;
 
     public void setupData(ArrayList<MenuTableSections> tableSections) {
         this.tableSections = tableSections;
@@ -53,9 +55,9 @@ public class FireStationBaseAdapter extends SectionAdapter {
     @Override
     public View getRowView(int section, int row, View convertView, ViewGroup parent) {
 
-        MenuItem menuItem = getRowItem(section, row);
+        MenuListItem menuListItem = getRowItem(section, row);
 
-        FireStationBaseAdapter.ViewHolderRowItem viewHolderRowItem;
+        MenuListAdapter.ViewHolderRowItem viewHolderRowItem;
         if (convertView == null) {
             convertView = inflater.inflate(R.layout.list_item_menu_item, parent,false);
             viewHolderRowItem = new ViewHolderRowItem();
@@ -71,12 +73,12 @@ public class FireStationBaseAdapter extends SectionAdapter {
             return convertView;
         }
 
-        viewHolderRowItem.titleOfItemTextView.setText(menuItem.getItemName());
-        viewHolderRowItem.itemTypeTextView.setText(menuItem.getItemType());
-        viewHolderRowItem.concentrationValueTextView.setText(String.valueOf(menuItem.getThcLevel()));
-        viewHolderRowItem.smallerPriceTextView.setText(String.valueOf(menuItem.getEightPrice()));
-        viewHolderRowItem.largerPriceTextView.setText(String.valueOf(menuItem.getQuadPrice()));
-        // viewHolderRowItem.itemImageImageView.setImageIcon(menuItem.getImage());
+        viewHolderRowItem.titleOfItemTextView.setText(menuListItem.getItemName());
+        viewHolderRowItem.itemTypeTextView.setText(menuListItem.getItemType());
+        viewHolderRowItem.concentrationValueTextView.setText(String.valueOf(menuListItem.getThcLevel()));
+        viewHolderRowItem.smallerPriceTextView.setText(String.valueOf(menuListItem.getEightPrice()));
+        viewHolderRowItem.largerPriceTextView.setText(String.valueOf(menuListItem.getQuadPrice()));
+        // viewHolderRowItem.itemImageImageView.setImageIcon(menuListItem.getImage());
 
 
         return convertView;
@@ -88,9 +90,17 @@ public class FireStationBaseAdapter extends SectionAdapter {
     }
 
     @Override
-    public MenuItem getRowItem(int section, int row) {
+    public MenuListItem getRowItem(int section, int row) {
 
         return tableSections.get(section).getSectionData().get(row);
+    }
+
+    @Override
+    public void onRowItemClick(AdapterView<?> parent, View view, int section, int row, long id) {
+        MenuListItem menuListItem = getRowItem(section,row);
+
+        onMenuItemClickedListener.onMenuItemClicked(menuListItem);
+
     }
 
     @Override

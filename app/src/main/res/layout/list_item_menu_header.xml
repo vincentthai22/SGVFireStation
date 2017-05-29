@@ -1,16 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:layout_margin="10dp"
-    android:background="#dddddd">
+    android:background="#676767"
+    android:orientation="horizontal"
+    android:weightSum="100">
 
-    <TextView
-        android:id="@+id/menuHeaderListViewHeaderTextView"
-        style="@style/summaryLargeValueStyleBlack"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:text="Indica"/>
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="20"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/menuHeaderListViewHeaderTextView"
+            style="@style/summaryLargeValueStyleWhite"
+            android:textColor="#ffffff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Indica" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#cccccc"
+            android:text="(quantity)" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_weight="80">
+
+        <TextView
+            android:id="@+id/menuHeaderLowTierPricing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$10/g"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="25dp"
+            style="@style/summaryMediumTextStyleWhite"/>
+
+        <TextView
+            android:id="@+id/menuHeaderMidTierPricing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$15/g"
+            android:layout_alignTop="@+id/menuHeaderLowTierPricing"
+            android:layout_toRightOf="@+id/menuHeaderLowTierPricing"
+            android:layout_marginLeft="25dp"
+            style="@style/summaryMediumTextStyleWhite"/>
+
+        <TextView
+            android:id="@+id/menuHeaderHighTierPricing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="$20/g"
+            android:layout_alignTop="@+id/menuHeaderLowTierPricing"
+            android:layout_toRightOf="@+id/menuHeaderMidTierPricing"
+            android:layout_marginLeft="25dp"
+            style="@style/summaryMediumTextStyleWhite"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/menuHeaderLowTierPricing"
+            android:layout_alignRight="@+id/menuHeaderLowTierPricing"
+            android:textColor="#cccccc"
+            android:text="10"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/menuHeaderLowTierPricing"
+            android:layout_alignRight="@+id/menuHeaderMidTierPricing"
+            android:textColor="#cccccc"
+            android:text="10"/>
+
+        <TextView
+            android:id="@+id/menuHeaderHighTierPricingAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/menuHeaderLowTierPricing"
+            android:layout_alignRight="@+id/menuHeaderHighTierPricing"
+            android:textColor="#cccccc"
+            android:text="10"/>
+
+
+
+
+    </RelativeLayout>
 
 </LinearLayout>

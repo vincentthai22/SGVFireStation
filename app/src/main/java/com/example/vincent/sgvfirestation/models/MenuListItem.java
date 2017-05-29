@@ -3,12 +3,15 @@ package com.example.vincent.sgvfirestation.models;
 import android.graphics.drawable.Icon;
 
 import com.example.vincent.sgvfirestation.AppConstants;
+import com.example.vincent.sgvfirestation.Firebase.FirebaseManager;
 
 /**
  * Created by Vincent on 5/7/2017.
  */
 
-public class MenuItem {
+public class MenuListItem {
+
+    private long itemId;
 
     private String itemName;
 
@@ -21,12 +24,12 @@ public class MenuItem {
             thcLevel, cbdLevel, cbnLevel;
 
 
-    public MenuItem(String itemName, String priceTier, String itemType, String description) {
+    public MenuListItem(String itemName, String priceTier, String itemType, String description) {
         this.itemName = itemName;
         this.priceTier = priceTier;
         this.itemType = itemType;
         this.description = description;
-
+        this.itemId = FirebaseManager.menuItemIdIncrementor++;
         switch(priceTier){
             case AppConstants.lowTier:
                 singlePrice = AppConstants.LowTierPrice.Gram.getPrice();
@@ -36,21 +39,39 @@ public class MenuItem {
                 ouncePrice = AppConstants.LowTierPrice.Ounce.getPrice();
                 break;
             case AppConstants.midTier:
+                singlePrice = AppConstants.MidTierPrice.Gram.getPrice();
+                eightPrice =  AppConstants.MidTierPrice.Eighth.getPrice();
+                quadPrice = AppConstants.MidTierPrice.Quad.getPrice();
+                halfOzPrice = AppConstants.MidTierPrice.HalfOz.getPrice();
+                ouncePrice = AppConstants.MidTierPrice.Ounce.getPrice();
                 break;
             case AppConstants.highTier:
+                singlePrice = AppConstants.HighTierPrice.Gram.getPrice();
+                eightPrice =  AppConstants.HighTierPrice.Eighth.getPrice();
+                quadPrice = AppConstants.HighTierPrice.Quad.getPrice();
+                halfOzPrice = AppConstants.HighTierPrice.HalfOz.getPrice();
+                ouncePrice = AppConstants.HighTierPrice.Ounce.getPrice();
                 break;
             case AppConstants.connoisseur:
                 break;
         }
     }
 
-    public MenuItem(){
+    public MenuListItem(){
 
 
     }
 
 
 
+
+    public long getItemId() {
+        return itemId;
+    }
+
+    public void setItemId(int itemId) {
+        this.itemId = itemId;
+    }
     public Icon getImage() {
         return image;
     }

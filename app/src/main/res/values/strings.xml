@@ -15,4 +15,11 @@
     <string name="eighth">1/8</string>
     <string name="quad">1/4</string>
 
+    <!--Intent Strings-->
+    <string name="menuItemId">MenuItemStringIdentifier</string>
+
+    <!--Dialog String-->
+    <string name="loadingMenuText">Please wait for menu to load...</string>
+    <string name="welcomeText">Welcome!</string>
+
 </resources>
