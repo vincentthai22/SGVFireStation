@@ -6,7 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.example.vincent.sgvfirestation.ItemDetailScrollingActivity">
+    tools:context="com.thai.vincent.sgvfirestation.ItemDetailScrollingActivity"
+    android:background="@color/mainPageBackgroundColor">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/app_bar"
@@ -27,8 +28,9 @@
                 android:id="@+id/banner_img"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/supreme_og"
+                android:src="@drawable/daisies_white_meadow_summer_mood_64786_2560x1440"
                 android:scaleType="centerCrop" />
+            <!--supreme_og"-->
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar_within_collapsing"

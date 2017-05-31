@@ -17,7 +17,9 @@
             android:id="@+id/itemImageImageView"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:background="@drawable/alpha_og"/>
+            android:background="@drawable/daisies_white_meadow_summer_mood_64786_2560x1440"/>
+
+        <!--//alpha_og-->
 
     </LinearLayout>
 

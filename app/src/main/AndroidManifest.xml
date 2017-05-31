@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.vincent.sgvfirestation">
+    package="com.thai.vincent.sgvfirestation">
 
     <application
         android:allowBackup="true"
@@ -8,7 +8,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".MainActivity"
+
+        <activity android:name="com.thai.vincent.sgvfirestation.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,15 +18,26 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MenuActivity"
+        <activity android:name="com.thai.vincent.sgvfirestation.MenuActivity"
             android:theme="@style/AppTheme.NoActionBar"
             android:label="Menu"
             android:windowSoftInputMode="adjustPan"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName="com.thai.vincent.sgvfirestation.MainActivity"/>
 
-        <activity android:name=".ItemDetailScrollingActivity"
+        <activity android:name="com.thai.vincent.sgvfirestation.ItemDetailScrollingActivity"
             android:theme="@style/AppTheme.NoActionBar"
-            android:label="SomeBudName"/>
+            android:label="SomeBudName"
+            android:parentActivityName="com.thai.vincent.sgvfirestation.MenuActivity"/>
+
+        <activity android:name="com.thai.vincent.sgvfirestation.NewItemActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="New Item"
+            android:parentActivityName="com.thai.vincent.sgvfirestation.MenuActivity"/>
+
+        <activity android:name="com.thai.vincent.sgvfirestation.DealsActivity"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="Deals"
+            android:parentActivityName="com.thai.vincent.sgvfirestation.MainActivity"/>
 
 
 

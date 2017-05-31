@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">SGVFireStation</string>
-    <string name="main_screen_title">SGV Fire Station</string>
+    <string name="app_name">SGVPlantStore</string>
+    <string name="main_screen_title_1">SGV Plant</string>
+    <string name="main_screen_title_2">Store</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
@@ -9,7 +10,7 @@
     <!--Strain Types-->
     <string name="indica_string">Indica</string>
     <string name="sativa_string">Sativa</string>
-    <string name="hybrid_string"><Hybrid></Hybrid></string>
+    <string name="hybrid_string">Hybrid</string>
 
     <!--Amount Strings-->
     <string name="eighth">1/8</string>
@@ -27,5 +28,10 @@
     <!--Dialog String-->
     <string name="loadingMenuText">Please wait for menu to load...</string>
     <string name="welcomeText">Welcome!</string>
+
+
+    <!--filler string-->
+    <string name="dummyDescriptionText">Gorilla Glue is an Indica dominant strain that is ideal for patients looking for relaxation and pain relief without being stuck on the couch. The lemon and pine flavors provides head haziness and relaxed body effects.</string>
+    <string name="dummyDescriptionTextEffects"></string>
 
 </resources>

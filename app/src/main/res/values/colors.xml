@@ -12,5 +12,6 @@
     <color name="mainPageRelativeLayoutColor">#e2eeec</color>
 
     <color name="headerColor">#7384c9</color>
+    <color name="lightGray">#888</color>
 
 </resources>

@@ -5,7 +5,7 @@ android {
     compileSdkVersion 25
     buildToolsVersion "25.0.2"
     defaultConfig {
-        applicationId "com.example.vincent.sgvfirestation"
+        applicationId "com.thai.vincent.sgvfirestation"
         minSdkVersion 21
         targetSdkVersion 25
         versionCode 1

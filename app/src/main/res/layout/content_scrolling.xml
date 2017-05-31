@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.vincent.sgvfirestation.ItemDetailScrollingActivity"
+    tools:context="com.thai.vincent.sgvfirestation.ItemDetailScrollingActivity"
     tools:showIn="@layout/activity_scrolling">
 
     <LinearLayout
@@ -28,7 +28,7 @@
 
             <TextView
                 style="@style/subHeaderTextViewStyle"
-                android:text="dense and stanky"
+                android:text="WILL PUT YOU TO SLEEP."
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentStart="true"
                 android:id="@+id/textView" />
@@ -225,78 +225,52 @@
                 android:background="#ACACAC"/>
 
         </RelativeLayout>
+        
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
 
         <TextView
+            android:id="@+id/descriptionHeaderTextView"
             style="@style/headerTextViewStyle"
+            android:layout_height="wrap_content"
             android:text="Description:" />
 
         <TextView
-            android:id="@+id/txt_gender"
-            style="@style/valueTextViewStyle" />
+            android:id="@+id/descriptionValueTextView"
+            style="@style/summaryMediumTextStyleGray"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/dummyDescriptionText" />
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="@dimen/dimen8" />
 
         <TextView
-            style="@style/subHeaderTextViewStyle"
-            android:text="someStr" />
+            android:id="@+id/effectsHeaderTextView"
+            style="@style/headerTextViewStyle"
+            android:layout_height="wrap_content"
+            android:text="Effects:" />
 
         <TextView
-            android:id="@+id/txt_blood_info"
-            style="@style/valueTextViewStyle" />
+            android:id="@+id/effectsValueTextView"
+            style="@style/summaryMediumTextStyleGray"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/dummyDescriptionText" />
 
         <Space
             android:layout_width="match_parent"
             android:layout_height="@dimen/dimen16" />
 
-        <TextView
-            style="@style/headerTextViewStyle"
-            android:text="someStr" />
 
-        <TextView
-            style="@style/subHeaderTextViewStyle"
-            android:text="someStr" />
-
-        <include
-            android:id="@+id/layout_weight"
-            layout="@layout/layout_et_txt" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dimen8" />
-
-        <TextView
-            style="@style/subHeaderTextViewStyle"
-            android:text="someStr" />
-
-        <include
-            android:id="@+id/layout_length"
-            layout="@layout/layout_et_txt" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dimen8" />
-
-        <TextView
-            style="@style/subHeaderTextViewStyle"
-            android:text="someStr" />
-
-        <include
-            android:id="@+id/layout_head_size"
-            layout="@layout/layout_et_txt" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dimen8" />
-
-        <TextView
-            style="@style/subHeaderTextViewStyle"
-            android:text="someStr" />
-
-        <TextView
-            android:id="@+id/txt_birthplace"
-            style="@style/valueTextViewStyle" />
 
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>
